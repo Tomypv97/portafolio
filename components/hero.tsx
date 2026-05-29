@@ -40,9 +40,8 @@ export function Hero() {
           Técnico en Programación{" "}
           <span className="text-primary">(en curso)</span>
         </h2>
-        <p className="text-muted-foreground text-lg max-w-xl leading-relaxed">
-          Desarrollador apasionado por construir soluciones reales. Transformando ideas
-          en experiencias digitales con código limpio y diseño funcional.
+        <p className="text-foreground text-lg leading-relaxed mb-6">
+              Técnico en Programación en formación, con interés en el desarrollo backend y la creación de aplicaciones web. Busco convertir problemas reales en soluciones simples, eficientes y bien diseñadas.
         </p>
         <div className="mt-10 flex gap-4">
           <a

@@ -36,7 +36,7 @@ export function Header() {
           href="#"
           className="text-xl font-semibold text-foreground hover:text-primary transition-colors"
         >
-          Paz Tomás
+          PT
         </Link>
 
         {/* Desktop Navigation */}

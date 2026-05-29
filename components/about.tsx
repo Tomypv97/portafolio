@@ -11,21 +11,14 @@ export function About() {
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-foreground text-lg leading-relaxed mb-6">
-              Soy estudiante de la Tecnicatura en Programación, apasionado por el
-              desarrollo web y las tecnologías que transforman ideas en productos
-              digitales.
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Soy estudiante de la Licenciatura en Ciencias de la Computación en 4° año y próximo a finalizar la Tecnicatura en Programación. Me interesa el desarrollo de software, especialmente el backend y la creación de aplicaciones que resuelvan problemas reales.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Fuera del código, soy fanático del básquet: me ayuda a mantener el
-              equilibrio entre la pantalla y el mundo real. Creo que el trabajo en
-              equipo y la disciplina del deporte se traducen directamente en mejores
-              prácticas de desarrollo.
+              Además de la programación, juego al básquet, una actividad que me enseñó la importancia de la disciplina, la constancia y el trabajo en equipo.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Actualmente busco aplicar lo aprendido en proyectos reales donde pueda
-              crecer como desarrollador y aportar valor con soluciones funcionales y
-              bien diseñadas.
+              Actualmente busco seguir creciendo como desarrollador participando en proyectos donde pueda aplicar mis conocimientos y aportar soluciones funcionales.
             </p>
           </div>
           <div className="flex items-center justify-center">
