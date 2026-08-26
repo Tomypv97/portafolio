@@ -6,8 +6,8 @@ interface Project {
   title: string
   description: string
   stack: string[]
-  demoUrl: string
-  githubUrl: string
+  demoUrl?: string
+  githubUrl?: string
 }
 
 const projects: Project[] = [
@@ -18,6 +18,14 @@ const projects: Project[] = [
     stack: ["Next.js", "NestJS", "Supabase", "Tailwind"],
     demoUrl: "https://turnos-front-hazel.vercel.app",
     githubUrl: "https://github.com/Tomypv97/turnos-front",
+  },
+  {
+    title: "prodef1 — Pronósticos de Fórmula 1",
+    description:
+      "Aplicación web colaborativa de pronósticos de Fórmula 1, desarrollada en equipo con arquitectura hexagonal. A cargo de los módulos de Autenticación, Ligas y Ranking del backend.",
+    stack: ["NestJS", "Prisma", "MySQL", "TypeScript", "Arquitectura Hexagonal"],
+    // demoUrl: "", // TODO: sumar cuando esté deployado
+    // githubUrl: "", // TODO: sumar el link del repo cuando esté disponible
   },
 ]
 
@@ -63,28 +71,34 @@ export function Projects() {
                 <h3 className="text-xl font-semibold text-foreground">
                   {project.title}
                 </h3>
-                <div className="flex gap-3">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                    Demo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                    </svg>
-                    Código
-                  </a>
-                </div>
+                {(project.demoUrl || project.githubUrl) && (
+                  <div className="flex gap-3">
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <ExternalLink size={16} />
+                        Demo
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                        Código
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 {project.description}
