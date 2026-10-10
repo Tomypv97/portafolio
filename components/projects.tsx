@@ -27,6 +27,15 @@ const projects: Project[] = [
     demoUrl: "https://prode-f1-app.netlify.app",
     // githubUrl: "", // TODO: sumar el link del repo cuando esté disponible
   },
+
+  {
+    title: "Turnos Mobile",
+    description:
+      "App móvil para consultar turnos disponibles, reservarlos y cancelarlos, con persistencia local. Desarrollada con React Native y Expo como complemento del sistema de turnos web.",
+    stack: ["React Native", "Expo", "TypeScript", "AsyncStorage"],
+    githubUrl: "https://github.com/Tomypv97/turnos-mobile",
+  },
+
 ]
 
 export function Projects() {
