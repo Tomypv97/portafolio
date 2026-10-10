@@ -24,7 +24,7 @@ const projects: Project[] = [
     description:
       "Aplicación web colaborativa de pronósticos de Fórmula 1, desarrollada en equipo con arquitectura hexagonal. A cargo de los módulos de Autenticación, Ligas y Ranking del backend.",
     stack: ["NestJS", "Prisma", "MySQL", "TypeScript", "Arquitectura Hexagonal"],
-    // demoUrl: "", // TODO: sumar cuando esté deployado
+    demoUrl: "https://prode-f1-app.netlify.app",
     // githubUrl: "", // TODO: sumar el link del repo cuando esté disponible
   },
 ]
